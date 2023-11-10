@@ -38,9 +38,9 @@ public class PeliculaServicio {
     //Editar una pelicula
     @Transactional
     public void modificarPeli(Long id, String nombre, Integer duracion) {
-        Pelicula pelicula =new Pelicula();
         Optional<Pelicula> peli = repoPeli.findById(id);
         if (peli.isPresent()) {
+            Pelicula pelicula = peli.get();
             pelicula.setNombre(nombre);
             pelicula.setDuracion(duracion);
             repoPeli.save(pelicula);
