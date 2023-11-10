@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "ca245e7a-d59b-45e2-ac58-6591300400ad",
+		"name": "Cartelera",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30810364"
+	},
+	"item": [
+		{
+			"name": "ListarPeliculas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "Localhost:8080/pelicula",
+					"host": [
+						"Localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pelicula"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CrearPelicula",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Ballerina\",\r\n    \"duracion\": 93\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "Localhost:8080/pelicula/crear",
+					"host": [
+						"Localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pelicula",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarPelicula",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "Localhost:8080/pelicula/eliminar/9",
+					"host": [
+						"Localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pelicula",
+						"eliminar",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditarPelicula",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Rapidos y Furiosos 7\",\r\n    \"duracion\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "Localhost:8080/pelicula/editar/10",
+					"host": [
+						"Localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pelicula",
+						"editar",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "requerimiento1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombrePelicula\": \"Harry Potter y el cáliz de fuego\",\r\n    \"idSala\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "Localhost:8080/nombrePeli/idSala",
+					"host": [
+						"Localhost"
+					],
+					"port": "8080",
+					"path": [
+						"nombrePeli",
+						"idSala"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requerimiento2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombreSala\": \"Sala 33\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "Localhost:8080/estado",
+					"host": [
+						"Localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "requerimiento3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fechaDePublicacion\": \"2023-11-12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "Localhost:8080/fechaPublicacion",
+					"host": [
+						"Localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fechaPublicacion"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
