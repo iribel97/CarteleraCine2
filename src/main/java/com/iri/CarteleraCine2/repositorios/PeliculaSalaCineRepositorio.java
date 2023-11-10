@@ -20,4 +20,7 @@ public interface PeliculaSalaCineRepositorio extends JpaRepository<PeliculaSalaC
     
     @Query(value = "SELECT ps FROM PeliculaSalaCine ps WHERE ps.pelicula.nombre = :nombre AND ps.salaCine.id = :id")
     PeliculaSalaCine buscarRequerimiento1(@Param("nombre") String nombre,@Param("id") Long id);
+    
+    @Query(value="SELECT ps FROM PeliculaSalaCine ps WHERE ps.salaCine.nombre = :nombre")
+    List<PeliculaSalaCine> buscarPeliPorSala(@Param("nombre") String nombre);
 }

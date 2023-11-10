@@ -26,4 +26,16 @@ public class PeliculaSalaCineServicio {
     public PeliculaSalaCine buscarPeliPorNombre(String nombre, Long idSala){
         return repoPS.buscarRequerimiento1(nombre, idSala);
     }
+    
+    //cantidad de pelis por sala
+    public String peliPorSala(String nombreSala){
+        int cantidad = repoPS.buscarPeliPorSala(nombreSala).size();
+        if (cantidad < 3) {
+            return "Sala casi Vacía";
+        } else if (cantidad <= 5) {
+            return "Sala casi llena";
+        }
+        
+        return "Sala llena";
+    }
 }
