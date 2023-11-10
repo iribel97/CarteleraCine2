@@ -37,4 +37,4 @@ INSERT INTO `bd_cartelera`.`pelicula_sala_cine` (`fecha_fin`, `fecha_publicacion
 INSERT INTO `bd_cartelera`.`pelicula_sala_cine` (`fecha_fin`, `fecha_publicacion`, `pelicula_id`, `sala_cine_id`) VALUES ('2023-12-17', '2023-11-10', '2', '3');
 INSERT INTO `bd_cartelera`.`pelicula_sala_cine` (`fecha_fin`, `fecha_publicacion`, `pelicula_id`, `sala_cine_id`) VALUES ('2023-12-18', '2023-11-10', '3', '3');
 INSERT INTO `bd_cartelera`.`pelicula_sala_cine` (`fecha_fin`, `fecha_publicacion`, `pelicula_id`, `sala_cine_id`) VALUES ('2023-12-19', '2023-11-10', '4', '3');
-
+INSERT INTO `bd_cartelera`.`pelicula_sala_cine` (`fecha_fin`, `fecha_publicacion`, `pelicula_id`, `sala_cine_id`) VALUES ('2023-12-16', '2023-11-11', '1', '3');

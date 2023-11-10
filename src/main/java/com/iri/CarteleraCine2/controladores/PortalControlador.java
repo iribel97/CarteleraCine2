@@ -2,9 +2,11 @@
 package com.iri.CarteleraCine2.controladores;
 
 import com.iri.CarteleraCine2.Servicios.PeliculaSalaCineServicio;
+import com.iri.CarteleraCine2.entidades.Pelicula;
 import com.iri.CarteleraCine2.entidades.PeliculaSalaCine;
-import com.iri.CarteleraCine2.requerimientos.PrimerRequerimiento;
-import com.iri.CarteleraCine2.requerimientos.SegundoRequerimiento;
+import com.iri.CarteleraCine2.requerimientos.*;
+import java.util.List;
+import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -42,5 +44,14 @@ public class PortalControlador {
     public String estadoSala(@RequestBody SegundoRequerimiento segundo){
         return servPS.peliPorSala(segundo.getNombreSala());
         
+    }
+    
+    /*
+     *Presente las películas y devuelva la cantidad de las películas que se
+     *publican de acuerdo a una fecha(fecha_publicacion). REQUERIDO
+    */
+    @GetMapping("/fechaPublicacion")
+    public Map<List<Pelicula>, String> TercerRequerimientoControlador(@RequestBody TercerRequerimiento tercero){
+        return servPS.buscarPorFecha(tercero.getFechaDePublicacion());
     }
 }

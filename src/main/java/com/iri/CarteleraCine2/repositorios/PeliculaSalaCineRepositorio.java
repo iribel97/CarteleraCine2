@@ -5,6 +5,7 @@
 package com.iri.CarteleraCine2.repositorios;
 
 import com.iri.CarteleraCine2.entidades.PeliculaSalaCine;
+import java.util.Date;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -23,4 +24,7 @@ public interface PeliculaSalaCineRepositorio extends JpaRepository<PeliculaSalaC
     
     @Query(value="SELECT ps FROM PeliculaSalaCine ps WHERE ps.salaCine.nombre = :nombre")
     List<PeliculaSalaCine> buscarPeliPorSala(@Param("nombre") String nombre);
+    
+    @Query(value="SELECT ps FROM PeliculaSalaCine ps WHERE ps.fechaPublicacion = :fechaPublicacion")
+    List<PeliculaSalaCine> buscarPorFecha(@Param("fechaPublicacion") Date fechaPublicacion);
 }
